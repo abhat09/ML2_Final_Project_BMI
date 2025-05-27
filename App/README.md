@@ -43,7 +43,6 @@ This guide explains how to run the **Expo Go frontend** and **Flask backend** to
 - Python 3.7 or later
 - Required Python libraries:
   - `flask`, `flask-cors`, `torch`, `torchvision`, `Pillow`
-- Pretrained model file: `best_model_resnet.pth` placed in the `model/` directory
 
 ### Steps
 
@@ -53,13 +52,7 @@ This guide explains how to run the **Expo Go frontend** and **Flask backend** to
    cd model_backend
    ```
 
-2. (Optional) Install Python dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-   Or manually:
+2. Install Python dependencies:
 
    ```bash
    pip install flask flask-cors torch torchvision Pillow
@@ -77,13 +70,15 @@ This guide explains how to run the **Expo Go frontend** and **Flask backend** to
    http://127.0.0.1:5000
    ```
 
-**If using a real phone for testing**, replace `127.0.0.1` in your React Native code with your computer's local IP address (e.g., `http://192.168.1.66:5000`).
+**If using a real phone for testing**, replace `127.0.0.1` in your React Native code with your computer's local IP address (e.g., `http://192.xx.xx.xx:5000`).
 
 ---
 
 ## Troubleshooting
 
 ### Port 5000 is Already in Use
+
+If you are a mac user, see macOS guideline for freeing port 5000
 
 To check what is using port 5000:
 
@@ -116,7 +111,6 @@ This will release port 5000 for use by Flask.
 ### Mobile App Cannot Connect to Server
 
 - Use your computer’s IP address instead of `127.0.0.1` in the frontend
-- Ensure CORS is enabled with `CORS(app)` in Flask
 - Confirm that both devices are on the same network
 - Make sure your firewall allows connections to port 5000
 
