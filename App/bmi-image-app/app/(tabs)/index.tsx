@@ -7,7 +7,7 @@ export default function App() {
   const [bmiResult, setBmiResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const API_URL = 'http://192.168.1.66:5000/predict'; // Your Flask server IP
+  const API_URL = 'http://192.xx.xx.xx:xx/predict'; // Your Flask server IP
 
   const pickImageFromLibrary = async () => {
     const result = await ImagePicker.launchImageLibraryAsync({
